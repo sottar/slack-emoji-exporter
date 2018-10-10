@@ -29,6 +29,9 @@ func main() {
 		panic(err)
 	}
 
+	if err := os.RemoveAll("emoji"); err != nil {
+		panic(err)
+	}
 	if err := os.Mkdir("emoji", 0777); err != nil {
 		panic(err)
 	}
