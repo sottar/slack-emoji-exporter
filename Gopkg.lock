@@ -10,6 +10,14 @@
   version = "v1.4.0"
 
 [[projects]]
+  digest = "1:ecd9aa82687cf31d1585d4ac61d0ba180e42e8a6182b85bd785fcca8dfeefc1b"
+  name = "github.com/joho/godotenv"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "23d116af351c84513e1946b527c88823e476be13"
+  version = "v1.3.0"
+
+[[projects]]
   digest = "1:95d38d218bf2290987c6b0e885a9f0f2d3d3239235acaddca01c3fe36e5e5566"
   name = "github.com/nlopes/slack"
   packages = [
@@ -31,6 +39,9 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/nlopes/slack"]
+  input-imports = [
+    "github.com/joho/godotenv",
+    "github.com/nlopes/slack",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -7,10 +7,16 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/joho/godotenv"
 	"github.com/nlopes/slack"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		panic(err)
+	}
+
 	apiToken := os.Getenv("SLACK_API_TOKEN")
 	if apiToken == "" {
 		panic("SLACK_API_TOKEN is not set")
